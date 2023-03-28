@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import MyLearningOne from "./components/MyLearningOne";
+import FrontEnd from "./components/FrontEnd";
+import BackEnd from "./components/BackEnd";
+import DataBase from "./components/DataBase";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<MyLearningOne />} />
+      <Route path="/frontend" element={<FrontEnd />} />
+      <Route path="/backend" element={<BackEnd />} />
+      <Route path="/database" element={<DataBase />} />
+    </Routes>
   );
 }
 
