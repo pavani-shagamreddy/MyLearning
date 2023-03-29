@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function MyLearningOne() {
   return (
     <>
-      <ul className="SideNav_menu">
+      <ul className="sideNav_item">
         <li className="sideNav_item">
           <NavLink to="/frontend" className="sideNav_Link">
             TRACK-1 (FRONTEND)
