@@ -5,7 +5,7 @@ function ExpandableContent({ title, children }) {
 
   return (
     <div>
-      <h3 onClick={() => setExpanded(!expanded)}>{title}</h3>
+      <h6 onClick={() => setExpanded(!expanded)}>{title}</h6>
       {expanded && <div>{children}</div>}
     </div>
   );

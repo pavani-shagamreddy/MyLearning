@@ -5,14 +5,13 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
-import obj1 from "./objects";
+import obj1 from "./Object";
 export const UserContext = createContext();
 function AddResource({ isOpen, onClose }) {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [resource, setResource] = useState("");
   const handleAddResource = () => {
-    alert(`${title} ,${resource}`);
     if (title in obj1) {
       if (name in obj1[title]) {
         obj1[title][name].push(resource);
@@ -76,7 +75,9 @@ function AddResource({ isOpen, onClose }) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleAddResource}>Add</Button>
+          <Button onClick={handleAddResource} color="primary" autoFocus>
+            Add
+          </Button>
           <Button onClick={onClose} color="primary" autoFocus>
             Close
           </Button>

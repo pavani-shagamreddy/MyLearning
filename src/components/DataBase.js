@@ -1,7 +1,7 @@
 import React from "react";
 
 function DataBase() {
-  return <div>Coming Soon...</div>;
+  return <div style={{ textAlign: "center" }}>Coming Soon</div>;
 }
 
 export default DataBase;

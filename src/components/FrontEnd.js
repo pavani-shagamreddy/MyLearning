@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
 import { NavLink } from "react-router-dom";
 import AddResource from "./AddResource";
-import "./FrontEnd.css";
-
 function FrontEnd() {
   const [open, setOpen] = useState(false);
 
@@ -17,6 +14,7 @@ function FrontEnd() {
 
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>Frontend</h1>
       <div className="row  m-4">
         <div className="col-xl-6 mr-4">
           <div className="card" style={{ width: "95%" }}>
@@ -38,7 +36,7 @@ function FrontEnd() {
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-sm"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: "40px" }}
                   onClick={handleClickToOpen}
                 >
                   Add Resource
@@ -79,12 +77,12 @@ function FrontEnd() {
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-sm"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: "40px" }}
                   onClick={handleClickToOpen}
                 >
                   Add Resource
                 </button>
-                <AddResource isOpen={open} onClose={handleToClose} />
+                <AddResource Open={open} onClose={handleToClose} />
                 <button type="button" class="btn btn-outline-primary btn-sm ">
                   <NavLink
                     to="/viewresource"
@@ -122,7 +120,7 @@ function FrontEnd() {
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-sm"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: "40px" }}
                   onClick={handleClickToOpen}
                 >
                   Add Resource
@@ -163,7 +161,7 @@ function FrontEnd() {
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-sm"
-                  style={{ marginRight: "10px" }}
+                  style={{ marginRight: "40px" }}
                   onClick={handleClickToOpen}
                 >
                   Add Resource
