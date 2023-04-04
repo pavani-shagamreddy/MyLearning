@@ -6,6 +6,7 @@ import FrontEnd from "./components/FrontEnd";
 import BackEnd from "./components/BackEnd";
 import DataBase from "./components/DataBase";
 import ViewResource from "./components/ViewResource";
+import React from "react";
 function App() {
   return (
     <Routes>

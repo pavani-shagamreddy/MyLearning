@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
-import AddResource from "./AddResource";
 import { NavLink } from "react-router-dom";
-import ViewResource from "./ViewResource";
+import AddResource from "./AddResource";
+import "./FrontEnd.css";
 
 function FrontEnd() {
   const [open, setOpen] = useState(false);
@@ -16,77 +16,174 @@ function FrontEnd() {
   };
 
   return (
-    <>
-      <div stlye={{}}>
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th>week</th>
-              <th>courseName</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1 - 2</td>
-              <td>React fundamenals and Hooks</td>
-              <td>
-                <Button
-                  variant="outlined"
-                  color="primary"
+    <div>
+      <div className="row  m-4">
+        <div className="col-xl-6 mr-4">
+          <div className="card" style={{ width: "95%" }}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                  <button type="button" class="btn btn-secondary ">
+                    WEEK
+                    <br /> (1 - 2)
+                  </button>
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">React fundamentals and Hooks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+              <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm"
+                  style={{ marginRight: "10px" }}
                   onClick={handleClickToOpen}
                 >
                   Add Resource
-                </Button>
+                </button>
                 <AddResource isOpen={open} onClose={handleToClose} />
-              </td>
-              <td>
-                <NavLink to="/viewresource">
-                  <button>viewresource</button>
-                </NavLink>
-              </td>
-            </tr>
-            <tr>
-              <td>2 - 4</td>
-              <td>React Redux</td>
-              <td>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  onClick={handleClickToOpen}
-                >
-                  Add Resource
-                </Button>
-                <AddResource isOpen={open} onClose={handleToClose} />
-              </td>
-              <td>
-                <button>viewresource</button>
-              </td>
-            </tr>
-            <tr>
-              <td>5 - 6</td>
-              <td>Unit Testing using RTL</td>
-              <td>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  onClick={handleClickToOpen}
-                >
-                  Add Resource
-                </Button>
-                <AddResource isOpen={open} onClose={handleToClose} />
-              </td>
-              <td>
-                <button>viewresource</button>
-              </td>
-            </tr>
-            <tr>
-              <td>7 - 8</td>
-              <td>Project</td>
-            </tr>
-          </tbody>
-        </table>
+                <button type="button" class="btn btn-outline-primary btn-sm ">
+                  <NavLink
+                    to="/viewresource"
+                    role="button"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Resources
+                  </NavLink>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </>
+      <div className="row  m-4">
+        <div className="col-xl-6 mr-4">
+          <div className="card" style={{ width: "95%" }}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                  <button type="button" class="btn btn-secondary ">
+                    WEEK <br />
+                    (3 - 4)
+                  </button>
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">React Routing, Redux and Git</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+              <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm"
+                  style={{ marginRight: "10px" }}
+                  onClick={handleClickToOpen}
+                >
+                  Add Resource
+                </button>
+                <AddResource isOpen={open} onClose={handleToClose} />
+                <button type="button" class="btn btn-outline-primary btn-sm ">
+                  <NavLink
+                    to="/viewresource"
+                    role="button"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Resources
+                  </NavLink>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row  m-4">
+        <div className="col-xl-6 mr-4">
+          <div className="card" style={{ width: "95%" }}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                  <button type="button" class="btn btn-secondary ">
+                    WEEK <br />
+                    (5 - 6)
+                  </button>
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">
+                      React Testing and Folder structure
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+              <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm"
+                  style={{ marginRight: "10px" }}
+                  onClick={handleClickToOpen}
+                >
+                  Add Resource
+                </button>
+                <AddResource isOpen={open} onClose={handleToClose} />
+                <button type="button" class="btn btn-outline-primary btn-sm ">
+                  <NavLink
+                    to="/viewresource"
+                    role="button"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Resources
+                  </NavLink>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row  m-4">
+        <div className="col-xl-6 mr-4">
+          <div className="card" style={{ width: "95%" }}>
+            <div className="card-body">
+              <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center">
+                  <button type="button" class="btn btn-secondary ">
+                    WEEK <br />
+                    (7 - 8)
+                  </button>
+                  <div className="ms-3">
+                    <p className="fw-bold mb-1">Project</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+              <div class="card-footer border-0 bg-light p-1 d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm"
+                  style={{ marginRight: "10px" }}
+                  onClick={handleClickToOpen}
+                >
+                  Add Resource
+                </button>
+                <AddResource isOpen={open} onClose={handleToClose} />
+                <button type="button" class="btn btn-outline-primary btn-sm ">
+                  <NavLink
+                    to="/viewresource"
+                    role="button"
+                    style={{ textDecoration: "none" }}
+                  >
+                    View Resources
+                  </NavLink>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

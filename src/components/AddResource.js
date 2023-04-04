@@ -18,14 +18,13 @@ function AddResource({ isOpen, onClose }) {
         obj1[title][name].push(resource);
       } else {
         const key = name;
-        obj1.title[key] = [resource];
+        obj1[title][key] = [resource];
       }
     } else {
       const obj2 = {};
       const key = name;
       obj2[key] = [resource];
-      const k = title;
-      obj1[k] = obj2;
+      obj1[title] = obj2;
     }
 
     console.log(obj1);
