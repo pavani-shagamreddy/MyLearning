@@ -31,7 +31,7 @@ function AddResource({ isOpen, onClose }) {
   if (!isOpen) return null;
   return (
     <>
-      <Dialog open={isOpen} onClose={onClose}>
+      <Dialog open={isOpen} onClose={onClose} style={{ width: "100%" }}>
         <DialogTitle>{"Add a Resouce"}</DialogTitle>
         <DialogContent>
           <DialogContentText>
